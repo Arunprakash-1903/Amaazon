@@ -34,3 +34,17 @@ margin-top: 20px;
 .CheckoutProduct__cost{
     display: flex;
 }
+
+@media only screen and (max-width: 768px){
+    .checkoutproduct{
+        width: 100vw;
+    }
+    .CheckoutProduct__info{
+        width: 300px;
+        margin-left: -30px;
+  
+    }
+    .CheckoutProduct__image{
+        margin-left: -20px;
+    }
+}

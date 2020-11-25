@@ -9,7 +9,8 @@
     min-width: 100px;
     z-index: 1;
     padding: 20px;
-    margin: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .product >img{
     margin-bottom: 10px;
@@ -37,4 +38,21 @@ margin-top:10px;
 }
 .product__rating{
     display: flex;
+}
+
+@media only screen and (max-width: 768px){
+    .product{
+    max-height: 400px;
+    max-width: 500px; 
+    margin-left: 0;
+    margin-right: 0;
+}
+}
+@media only screen and (max-width: 1024px){
+    .product{
+        max-height: 400px;
+        max-width: 1600px; 
+        margin-left: 0;
+        margin-right: 0;
+    }
 }

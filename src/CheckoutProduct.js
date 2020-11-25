@@ -16,7 +16,7 @@ id:id
    }
     return (
         <div className="checkoutproduct">
-           <img src={image} alt=""/>  
+           <img className="CheckoutProduct__image" src={image} alt=""/>  
            
            
             <div className="CheckoutProduct__info">

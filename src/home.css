@@ -1,20 +1,34 @@
 .home__image{
-    object-fit: contain;
-    flex:-1;
-    width:100%;
+    
+  
+    flex:1;
+    width:100vw;
     mask-image: linear-gradient(to bottom ,rgba(0,0,0,1),rgba(0,0,0,0));
 }
 .home {
     display: flex;
+    flex-direction: column;
     justify-content:center ;
     max-width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     background-color:#EAEDED;
 }
-.home__productrow{
-    display: flex;
-    margin: 0px 5px;
-    z-index: 1;
+
+.home__container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    grid-template-rows: repeat(auto-fit,minmax(400px,1fr));
+row-gap: 10px;
+column-gap: 50px;
+ 
 }
 
+@media only screen and (max-width: 768px){
+    .home{
+      overflow-x: hidden;
+
+
+    }
+   
+}

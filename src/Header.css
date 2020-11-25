@@ -6,12 +6,14 @@
     top:0px;
     z-index: 100;
     height:60px;
+  padding: 3px;
 }
 .header__logo{
     object-fit: contain;
     width:100px;
     margin: 0px 20px;
     margin-top: 18px;
+  
 }
 .header__search{
     display: flex;
@@ -20,10 +22,12 @@
     border-radius: 24px;
 }
 .header__options{
-    display: flex;
-    flex-direction: column;
-    color: #FFFFFF;
-    margin: 0 10px;
+    display: flex ;
+    flex-direction: column ;
+    color: #FFFFFF ;
+    margin: 0 10px ;
+   
+   
 
 }
 .header__nav{
@@ -57,4 +61,83 @@ color:white
 .header__basketcount{
     margin: 0px 10px;
     
+}
+.header__left > .MuiSvgIcon-root{
+display: none ;
+}
+#one #two #three #four{
+    box-sizing:content-box
+}
+#four{
+    margin: 0px 10px;
+}
+#one:hover{
+    border: 1px solid white;
+    padding: 5px;
+    margin-left: 10px;
+
+
+}
+#two:hover{
+  
+    border: 2px solid white;
+    padding: 5px;
+}
+#three:hover{
+
+    border: 1px solid white;
+    padding: 5px;
+}
+#four:hover{
+    border: 1px solid white;
+    padding: 5px;
+}
+.header__logo:hover{
+    border: 2px solid white;
+   padding-bottom: 5px;
+   padding-right: 30px;
+   padding-top: 10px;
+   margin-bottom: 10px;
+   
+}
+
+
+@media only screen and (max-width: 768px){
+    .header__options{
+      display: none;  
+    }
+    .header__optionbasket{
+        margin-left: 10px;
+        
+    }
+   .header__logo{
+       width: 70px;
+   }
+    .header__left{
+        display: flex;
+        align-items: center;
+    }
+    .header__left > .MuiSvgIcon-root{
+        color: white !important;
+        margin-left: 10px !important;
+        display:inline !important;
+        border: 1px solid #666;
+        padding: 5px;
+        font-size: 30px;
+        border-radius: 4px;
+
+    }
+    .header__left > .MuiSvgIcon-root:hover{
+        border:1px solid white; 
+    }
+    #four:hover{
+        border: none;
+       
+    }
+    .header__logo:hover{
+        border: none;
+        margin: 0px 20px;
+    margin-top: 18px;
+       
+    }
 }

@@ -14,6 +14,7 @@ import {loadStripe} from "@stripe/stripe-js"
 import {Elements} from "@stripe/react-stripe-js"
 
 
+
 const promise=loadStripe("pk_test_51HkmwwIQnIwJz7kRCEPUvXFlvi5JhYgfRCMC4h33xrVMGm921zNaDM44myyTGXdJPCAqGPaJudx0t1BRgSjOMy7000d0iC9Rk2")
 function App() {
 
@@ -53,6 +54,7 @@ function App() {
  <Route path="/createaccount">
 <Createaccount />
  </Route>
+ 
       <Route path="/checkout">
       <Header />
       

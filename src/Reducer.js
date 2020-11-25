@@ -22,6 +22,11 @@ switch (action.type) {
 basket:[...state.basket,action.item],
 
         }
+        case "EMPTY_BASKET":
+            return{
+                ...state,
+                basket:[],
+            }
     
    case "REMOVE_FORM_BASKET":
        const index=state.basket.findIndex(
