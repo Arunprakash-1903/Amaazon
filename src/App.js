@@ -12,13 +12,14 @@ import Payment from "./Payment.js"
 import Createaccount from "./Createaccount";
 import {loadStripe} from "@stripe/stripe-js"
 import {Elements} from "@stripe/react-stripe-js"
+import Searchedproduct from "./searchedproduct";
 
 
 
 const promise=loadStripe("pk_test_51HkmwwIQnIwJz7kRCEPUvXFlvi5JhYgfRCMC4h33xrVMGm921zNaDM44myyTGXdJPCAqGPaJudx0t1BRgSjOMy7000d0iC9Rk2")
+
 function App() {
 
-  
   const [,dispatch]=useSetValue();
   useEffect(() => {
   
@@ -59,6 +60,12 @@ function App() {
       <Header />
       
 <Checkout />
+
+</Route>
+<Route path="/searched-item">
+      <Header />
+      
+<Searchedproduct />
 
 </Route>
 <Route path="/payment">

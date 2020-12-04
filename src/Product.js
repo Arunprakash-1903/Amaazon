@@ -18,8 +18,8 @@ dispatch({
 title:title,
 cost:cost,
 rating:rating,
-image:image,
-key:key
+image:image
+
     },
 })
 }

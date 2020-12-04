@@ -50,6 +50,8 @@ margin-top:10px;
 }
 @media only screen and (max-width: 1024px){
     .product{
+        min-width: 100px;
+        min-height: 100px;
         max-height: 400px;
         max-width: 1600px; 
         margin-left: 0;

@@ -1,0 +1,40 @@
+[debug] [2020-12-02T17:26:58.308Z] ----------------------------------------------------------------------
+[debug] [2020-12-02T17:26:58.312Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Arun Prakash\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2020-12-02T17:26:58.313Z] CLI Version:   8.16.2
+[debug] [2020-12-02T17:26:58.313Z] Platform:      win32
+[debug] [2020-12-02T17:26:58.313Z] Node Version:  v12.19.0
+[debug] [2020-12-02T17:26:58.344Z] Time:          Wed Dec 02 2020 22:56:58 GMT+0530 (India Standard Time)
+[debug] [2020-12-02T17:26:58.345Z] ----------------------------------------------------------------------
+[debug] [2020-12-02T17:26:58.345Z] 
+[debug] [2020-12-02T17:26:58.350Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2020-12-02T17:26:58.418Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-02T17:26:58.419Z] > authorizing via signed-in user
+[debug] [2020-12-02T17:26:58.419Z] [iam] checking project fir-e7762 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-12-02T17:26:58.422Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-12-02T17:26:58.422Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-12-02T17:27:01.659Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2020-12-02T17:27:01.659Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2020-12-02T17:28:20.068Z] ----------------------------------------------------------------------
+[debug] [2020-12-02T17:28:20.070Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Arun Prakash\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2020-12-02T17:28:20.071Z] CLI Version:   8.16.2
+[debug] [2020-12-02T17:28:20.071Z] Platform:      win32
+[debug] [2020-12-02T17:28:20.071Z] Node Version:  v12.19.0
+[debug] [2020-12-02T17:28:20.072Z] Time:          Wed Dec 02 2020 22:58:20 GMT+0530 (India Standard Time)
+[debug] [2020-12-02T17:28:20.072Z] ----------------------------------------------------------------------
+[debug] [2020-12-02T17:28:20.072Z] 
+[debug] [2020-12-02T17:28:20.080Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-12-02T17:28:20.081Z] > authorizing via signed-in user
+[debug] [2020-12-02T17:28:20.081Z] [iam] checking project fir-e7762 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-12-02T17:28:20.084Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-12-02T17:28:20.084Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-12-02T17:28:31.696Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2020-12-02T17:28:31.698Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-12-02T17:28:31.698Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-12-02T17:28:43.293Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci

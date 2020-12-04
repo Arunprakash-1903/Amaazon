@@ -4,7 +4,8 @@
     basket:[],
     user:[],
     mobile:[],
-    name:[]
+    name:[],
+    items:[]
 
 }
 
@@ -61,6 +62,11 @@ case "SET_USER":
             name:action.name,
             mobile:action.mobile
         }
+ case "SEARCHED_ITEM":
+     return{
+         ...state,
+         items:[action.item]
+     }
 default:  return state
 
         

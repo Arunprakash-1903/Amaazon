@@ -6,6 +6,7 @@ import ListAltIcon from '@material-ui/icons/ListAlt';
 import "./SideBar.css"
 import { Link } from 'react-router-dom';
 import CloseIcon from '@material-ui/icons/Close';
+import { IconButton } from '@material-ui/core';
 function SideBar({s, ss}) {
     const [{user}]=useSetValue();
     const handleauth = () =>{
@@ -17,8 +18,16 @@ function SideBar({s, ss}) {
     return (
     
            <div className={s ?"sidebar active" : "sidebar"}>
-               <div onClick={s => ss(!s)} className="sidebar__close">
-                    <CloseIcon />
+               <div onClick={s => ss(!s)} >
+              
+               <IconButton >
+               <div className="sidebar__close">
+            <CloseIcon />
+            </div>
+           </IconButton>  
+
+           
+               
                     </div>
              
                <Link style={{textDecoration:"none"}} to="/login">

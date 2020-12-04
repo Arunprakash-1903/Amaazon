@@ -1,15 +1,20 @@
 import React from 'react'
+import {useEffect} from 'react'
 import SearchSharpIcon from '@material-ui/icons/SearchSharp';
 import "./Header.css"
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import { Link } from 'react-router-dom';
+import { Link,useHistory } from 'react-router-dom';
 import { useSetValue } from './stateProvider';
 import { auth } from './firebase';
 import MenuIcon from '@material-ui/icons/Menu';
 import {useState} from "react"
 import SideBar from "./SideBar"
-
+import axios from './axios';
 function Header() {
+    const history=useHistory();
+    const [input,setinput]=useState("")
+   
+  const [item,setitem]=useState([])
     const [open, setopen] = useState(false);
     const handleclick=()=>{
         setopen(!open);
@@ -22,7 +27,7 @@ function Header() {
         
         }
     }
-    
+    const [,dispatch]=useSetValue();
     return (
    < div>
    
@@ -40,8 +45,26 @@ function Header() {
                </div>
                  
          <div className="header__search">
-             <input className="header__searchInput" type="text"/>
-   <SearchSharpIcon className="header__searchIcon" />
+             <input onChange={e=>setinput(e.target.value)} className="header__searchInput" type="text" value={input}/>
+             
+                 <SearchSharpIcon className="header__searchIcon"  onClick={() => {
+   
+   const title= axios({
+       method:"post",
+       url:`searchTitle?title=${input}`
+   }).then((title)=>{
+       
+setitem(title.data.stitle);
+dispatch({
+ type:"SEARCHED_ITEM",
+ item:item,
+ 
+})
+   })
+   history.push("/searched-item") ;
+ }} />
+\
+   
          </div>
          <div className="header__nav">
          

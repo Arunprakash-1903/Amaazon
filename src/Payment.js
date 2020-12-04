@@ -53,7 +53,7 @@ const  payload = await stripe.confirmCardPayment(clientsecret, {
     .collection('orders')
     .doc(paymentIntent.id)
     .set({
-      basket: JSON.stringify(basket),
+      basket:JSON.stringify(basket),
         
       amount:paymentIntent.amount,
       created:paymentIntent.created
