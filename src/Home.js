@@ -26,7 +26,7 @@ function Home() {
         <div className="home">
             <img className="home__image" src="https://images-eu.ssl-images-amazon.com/images/G/31/img16/vineet/phase3/mainbank/pc/Slice_9NP.jpg" alt="vffgsh"/>
             <div  className="home__container" >
-                
+           
               
               { allproducts?.map(item=>{ return  <Product key={item?.id} title={item?.title} rating={item?.rating}  cost={item?.cost} image={item?.image}
                    /> })} 

@@ -10,12 +10,33 @@ import MenuIcon from '@material-ui/icons/Menu';
 import {useState} from "react"
 import SideBar from "./SideBar"
 import axios from './axios';
+
 function Header() {
-    const history=useHistory();
+    const [{items}]=useSetValue();
     const [input,setinput]=useState("")
+    useEffect(async() => {
+        
+        const title= await axios({
+            method:"post",
+            url:`searchTitle?title=${input}`
+        }).then((title)=>{
+         
+     setitem(title.data);
+    
+        })
+   
+dispatch({
+    type:"SEARCHED_ITEM",
+    item:item,
+    
+   })
+      }, [input])
+    const history=useHistory();
+
    
   const [item,setitem]=useState([])
     const [open, setopen] = useState(false);
+    console.log(item);
     const handleclick=()=>{
         setopen(!open);
     }
@@ -46,26 +67,20 @@ function Header() {
                  
          <div className="header__search">
              <input onChange={e=>setinput(e.target.value)} className="header__searchInput" type="text" value={input}/>
-             
+                 
+            
                  <SearchSharpIcon className="header__searchIcon"  onClick={() => {
-   
-   const title= axios({
-       method:"post",
-       url:`searchTitle?title=${input}`
-   }).then((title)=>{
-       
-setitem(title.data.stitle);
-dispatch({
- type:"SEARCHED_ITEM",
- item:item,
+
  
-})
-   })
-   history.push("/searched-item") ;
+
  }} />
-\
+
    
          </div>
+         <div className="seacrchitem">
+         {items.map((item)=>{
+             return( <ul><li>{item.title}</li></ul>)
+         })} </div>
          <div className="header__nav">
          
          <div id="one">

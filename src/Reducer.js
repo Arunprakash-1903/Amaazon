@@ -64,8 +64,8 @@ case "SET_USER":
         }
  case "SEARCHED_ITEM":
      return{
-         ...state,
-         items:[action.item]
+        ...state,
+         items:action.item
      }
 default:  return state
 

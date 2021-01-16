@@ -12,7 +12,7 @@ import Payment from "./Payment.js"
 import Createaccount from "./Createaccount";
 import {loadStripe} from "@stripe/stripe-js"
 import {Elements} from "@stripe/react-stripe-js"
-import Searchedproduct from "./searchedproduct";
+
 
 
 
@@ -60,14 +60,8 @@ function App() {
       <Header />
       
 <Checkout />
-
 </Route>
-<Route path="/searched-item">
-      <Header />
-      
-<Searchedproduct />
 
-</Route>
 <Route path="/payment">
       <Header />
      <Elements stripe={promise} >

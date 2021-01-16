@@ -10,7 +10,8 @@ transition: 600ms ;
 }
 .sidebar{
     position: absolute;
-    left: -100%;
+  /* transform: translateX(-20px); */
+  left:-100%;
     transition: 800ms ;
 }
 .sidebar__items{

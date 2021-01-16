@@ -8,6 +8,8 @@ import { useSetValue } from './stateProvider';
 
 
 function Product({title,  cost,rating,image ,key}) {
+
+
     const [,dispatch]=useSetValue();
   
  const addtobasket =() => {
@@ -26,6 +28,8 @@ image:image
     return (   
       
     <div className="product">
+
+        
     <div className="product__info">
     <p>{title}</p>
         <div className="product__price">
